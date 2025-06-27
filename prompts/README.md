@@ -52,12 +52,12 @@ Resume el siguiente bloque de código.
 
 ```markdown
 # Refactor.md
-Sugiere posibles refactorizaciones para mejorar la legibilidad y el rendimiento del código siguiente.
+Sugiere posibles refactorizaciones para mejorar la legibilidad y el rendimiento del código.
 ```
 
 #### Avanzado Windsurf
 
 ```markdown
 # Test-and-improve.md
-Dado el siguiente código, genera pruebas unitarias y sugiere mejoras de seguridad y performance.
+Dado el siguiente código, genera tests unitarios y sugiere mejoras de seguridad y rendimiento.
 ```
