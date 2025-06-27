@@ -1,0 +1,66 @@
+# Node/VSC/Editor/OS junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# VSCode settings
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# System files
+.idea/
+.env
+.env.*
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+
+# Backup files
+*~
+
+# Exclude personal or temp files
+*.local
+*.secret
+
+# Exclude test outputs
+/test-output/
+
+# Exclude examples outputs
+/examples/output/
+
+# Exclude agent-specific cache
+/copilot-cache/
+/windsurf-cache/
+
+# Exclude notebook checkpoints
+.ipynb_checkpoints/
+
+# Exclude markdown preview artifacts
+*.preview.html
+
+# Exclude archives
+*.zip
+*.tar.gz
+*.rar
+
+# Exclude node_modules just in case
+node_modules/
+
+# Exclude coverage
+coverage/
+
+# Exclude build artifacts
+/dist/
+/build/
