@@ -5,7 +5,7 @@
 
 ---
 
-## 🗂️ Vision general de recursos
+## 🗂️ Visión general de recursos
 
 | Carpeta      | Contenido principal                                   |
 |-------------|-------------------------------------------------------|
@@ -14,7 +14,7 @@
 | `/tools/`   | Recursos ligeros tipo tools (no ejecutables)          |
 | `/examples/`| Ejemplos de uso y casos practicos                     |
 
-## 🎯 Cual es el objetivo de este repo?
+## 🎯 ¿Cuál es el objetivo de este repo?
 
 Este repositorio busca unificar la forma de trabajar con agentes de inteligencia artificial en distintos entornos y editores. Aqui encontraras:
 
@@ -25,7 +25,7 @@ Este repositorio busca unificar la forma de trabajar con agentes de inteligencia
 
 > **Nota:** Este repositorio _no contiene MCPs, sistemas ejecutables ni codigo fuente de agentes_. Su proposito es ser un toolkit portable de recursos textuales y de configuracion.
 
-## 🤝 Por que centralizar estos recursos
+## 🤝 ¿Por qué centralizar estos recursos?
 
 - **Portabilidad**: Clona este repo en cualquier maquina y mantén tu forma de trabajar sin depender del entorno.
 - **Consistencia**: Unifica criterios y reglas entre diferentes agentes y editores.

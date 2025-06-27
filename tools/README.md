@@ -9,7 +9,7 @@ Esta carpeta contiene recursos ligeros y configuraciones para ampliar o mejorar 
 
 ### 📝 Convención de nombres
 
-- Si un tool debe ser usado por ambos agentes, crea ambos archivos con el mismo nombre base y la extensión requerida por cada uno.
+- Si una herramienta debe ser usada por ambos agentes, crea ambos archivos con el mismo nombre base y la extensión requerida por cada uno.
 - Ejemplo: `format-on-save.json` (Copilot) y `format-on-save.md` (Windsurf)
 
 ## 📚 Ejemplos por agente
