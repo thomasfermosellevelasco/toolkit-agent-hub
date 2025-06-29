@@ -9,7 +9,8 @@ Este archivo centraliza las reglas de testing en Go. Un buen testing asegura cal
 ## Principios
 - Usa Given/When/Then en la estructura de los tests.
 - Cada test debe ser independiente y explícito.
-- Prohibido el uso de table-driven tests para lógica de negocio.
+- Prohibido el uso de table-driven tests para lógica de negocio crítica.
+  Nota: Los table-driven tests son aceptables para casos simples o funciones utilitarias, como se demuestra en los ejemplos de este documento.
 - Usa `require` para aserciones.
 - Nombra los tests de forma descriptiva.
 
