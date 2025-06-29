@@ -1,0 +1,360 @@
+// Toolset para operaciones Git básicas en Copilot Agent (VS Code)
+// Documentación: https://git-scm.com/docs
+{
+  "name": "git-tool",
+  "description": "Toolset para operaciones Git comunes (add, commit, push, status, log, checkout, branch, pull)",
+  "tools": [
+    {
+      "name": "git-status",
+      "description": "Muestra el estado actual del repositorio (archivos modificados, staged, untracked, etc.)",
+      "command": "git status",
+      "args": [],
+      "examples": [
+        "¿Cuál es el estado del repositorio?",
+        "Muestra los archivos modificados y en stage."
+      ]
+    },
+    {
+      "name": "git-add",
+      "description": "Añade archivos o directorios al área de stage.",
+      "command": "git add ${args}",
+      "args": [
+        {
+          "name": "args",
+          "description": "Archivos o patrones a añadir (ej: . o src/ o main.py)",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Añade todos los archivos a git.",
+        "git add ."
+      ]
+    },
+    {
+      "name": "git-commit",
+      "description": "Genera un commit con los archivos en stage.",
+      "command": "git commit -m \"${message}\"",
+      "args": [
+        {
+          "name": "message",
+          "description": "Mensaje del commit.",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Genera un commit con mensaje 'fix: corrige bug de login'",
+        "git commit -m 'fix: corrige bug de login'"
+      ]
+    },
+    {
+      "name": "git-push",
+      "description": "Envía los commits locales al repositorio remoto (rama actual).",
+      "command": "git push",
+      "args": [],
+      "examples": [
+        "Pushea los cambios al repositorio remoto.",
+        "git push"
+      ]
+    },
+    {
+      "name": "git-pull",
+      "description": "Actualiza la rama local con los cambios del remoto.",
+      "command": "git pull",
+      "args": [],
+      "examples": [
+        "Actualiza la rama con los últimos cambios del remoto.",
+        "git pull"
+      ]
+    },
+    {
+      "name": "git-log",
+      "description": "Muestra el historial de commits de la rama actual.",
+      "command": "git log --oneline --graph --decorate --all",
+      "args": [],
+      "examples": [
+        "Muestra el historial de commits.",
+        "git log"
+      ]
+    },
+    {
+      "name": "git-branch",
+      "description": "Lista las ramas locales y remotas.",
+      "command": "git branch -a",
+      "args": [],
+      "examples": [
+        "Lista todas las ramas.",
+        "git branch -a"
+      ]
+    },
+    {
+      "name": "git-checkout",
+      "description": "Cambia a otra rama existente.",
+      "command": "git checkout ${branch}",
+      "args": [
+        {
+          "name": "branch",
+          "description": "Nombre de la rama a la que cambiar.",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Cambia a la rama develop.",
+        "git checkout develop"
+      ]
+    },
+    {
+      "name": "git-stash",
+      "description": "Guarda los cambios actuales en un stash temporal.",
+      "command": "git stash",
+      "args": [],
+      "examples": [
+        "Guarda los cambios actuales en un stash.",
+        "git stash"
+      ]
+    },
+    {
+      "name": "git-stash-pop",
+      "description": "Recupera el último stash guardado y aplica los cambios. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git stash pop",
+      "args": [],
+      "tags": ["destructive"],
+      "examples": [
+        "Recupera los cambios guardados en el último stash.",
+        "git stash pop"
+      ]
+    },
+    {
+      "name": "git-diff",
+      "description": "Muestra las diferencias entre los archivos modificados y el último commit.",
+      "command": "git diff ${args}",
+      "args": [
+        {
+          "name": "args",
+          "description": "Archivos o rutas a comparar (opcional, por defecto todos)",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Muestra las diferencias de todos los archivos.",
+        "git diff src/"
+      ]
+    },
+    {
+      "name": "git-reset",
+      "description": "Deshace cambios en el área de stage o en el historial (soft/hard). ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git reset ${mode} ${target}",
+      "args": [
+        {
+          "name": "mode",
+          "description": "Modo de reset: --soft, --hard, vacío para reset simple.",
+          "required": false
+        },
+        {
+          "name": "target",
+          "description": "Commit o archivo a resetear (opcional)",
+          "required": false
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Deshace el último commit (soft)",
+        "git reset --soft HEAD~1"
+      ]
+    },
+    {
+      "name": "git-restore",
+      "description": "Descarta cambios en archivos específicos. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git restore ${args}",
+      "args": [
+        {
+          "name": "args",
+          "description": "Archivos a restaurar (ej: main.py)",
+          "required": true
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Descarta cambios en main.py.",
+        "git restore main.py"
+      ]
+    },
+    {
+      "name": "git-fetch",
+      "description": "Trae los cambios del repositorio remoto sin mezclar.",
+      "command": "git fetch",
+      "args": [],
+      "examples": [
+        "Trae los cambios del remoto.",
+        "git fetch"
+      ]
+    },
+    {
+      "name": "git-merge",
+      "description": "Une la rama especificada con la rama actual.",
+      "command": "git merge ${branch}",
+      "args": [
+        {
+          "name": "branch",
+          "description": "Nombre de la rama a unir.",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Une la rama develop con la actual.",
+        "git merge develop"
+      ]
+    },
+    {
+      "name": "git-rebase",
+      "description": "Reaplica commits sobre otra base.",
+      "command": "git rebase ${branch}",
+      "args": [
+        {
+          "name": "branch",
+          "description": "Nombre de la rama base.",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Reaplica commits sobre main.",
+        "git rebase main"
+      ]
+    },
+    {
+      "name": "git-remote",
+      "description": "Lista los remotos configurados.",
+      "command": "git remote -v",
+      "args": [],
+      "examples": [
+        "Lista los remotos configurados.",
+        "git remote -v"
+      ]
+    },
+    {
+      "name": "git-tag",
+      "description": "Lista o crea tags.",
+      "command": "git tag ${args}",
+      "args": [
+        {
+          "name": "args",
+          "description": "Nombre del tag o vacío para listar.",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Lista todos los tags.",
+        "git tag"
+      ]
+    },
+    {
+      "name": "git-tag-create",
+      "description": "Crea un tag anotado. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git tag -a ${tag} -m \"${message}\"",
+      "args": [
+        {
+          "name": "tag",
+          "description": "Nombre del tag.",
+          "required": true
+        },
+        {
+          "name": "message",
+          "description": "Mensaje del tag.",
+          "required": true
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Crea un tag v1.0.0 con mensaje 'release estable'",
+        "git tag -a v1.0.0 -m 'release estable'"
+      ]
+    },
+    {
+      "name": "git-cherry-pick",
+      "description": "Aplica un commit específico de otra rama. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git cherry-pick ${commit}",
+      "args": [
+        {
+          "name": "commit",
+          "description": "Hash del commit a aplicar.",
+          "required": true
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Aplica el commit abc123 a la rama actual.",
+        "git cherry-pick abc123"
+      ]
+    },
+    {
+      "name": "git-rm",
+      "description": "Elimina archivos del control de versiones. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git rm ${args}",
+      "args": [
+        {
+          "name": "args",
+          "description": "Archivos a eliminar.",
+          "required": true
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Elimina main.py del control de versiones.",
+        "git rm main.py"
+      ]
+    },
+    {
+      "name": "git-mv",
+      "description": "Renombra o mueve archivos. ¡Advertencia: esta operación puede ser destructiva y no reversible!",
+      "command": "git mv ${from} ${to}",
+      "args": [
+        {
+          "name": "from",
+          "description": "Archivo origen.",
+          "required": true
+        },
+        {
+          "name": "to",
+          "description": "Archivo destino.",
+          "required": true
+        }
+      ],
+      "tags": ["destructive"],
+      "examples": [
+        "Renombra main.py a main_old.py.",
+        "git mv main.py main_old.py"
+      ]
+    },
+    {
+      "name": "git-show",
+      "description": "Muestra detalles de un commit o tag.",
+      "command": "git show ${ref}",
+      "args": [
+        {
+          "name": "ref",
+          "description": "Hash del commit o nombre del tag.",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Muestra detalles del commit abc123.",
+        "git show abc123"
+      ]
+    },
+    {
+      "name": "git-config",
+      "description": "Muestra la configuración local o global de git.",
+      "command": "git config ${scope} --list",
+      "args": [
+        {
+          "name": "scope",
+          "description": "--local o --global (opcional)",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Muestra la configuración local.",
+        "git config --local --list"
+      ]
+    }
+  ]
+}
