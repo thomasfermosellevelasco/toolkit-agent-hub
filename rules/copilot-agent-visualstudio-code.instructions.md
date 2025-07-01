@@ -36,3 +36,7 @@ Estas instrucciones aplican exclusivamente cuando el agente es GitHub Copilot Ag
 > He detectado que tienes abierto el archivo `main.go`. Procedo a ejecutar el tool de linting configurado en `.copilot/toolsets.jsonc`.  
 > - Si el linter detecta errores, te mostraré un resumen y sugeriré aplicar `/fix` automáticamente.  
 > - Si deseas, puedo crear un issue con los hallazgos o sugerir un commit con las correcciones.
+
+---
+
+**Última revisión:** 2025-06-30

@@ -82,6 +82,83 @@ Consulta el README de cada carpeta para detalles y ejemplos por agente.
 
 ---
 
+## 🔗 Configuración para VS Code
+
+### Instalación automatizada
+
+Para sincronizar automáticamente las reglas con tu configuración local de VS Code:
+
+```bash
+# Opción 1: Script directo
+./scripts/setup-vscode-symlinks.sh
+
+# Opción 2: Make (recomendado)
+make setup-vscode
+
+# Opción 3: Simulación sin cambios
+make dry-run
+```
+
+### Comandos útiles
+
+```bash
+# Ver estado de enlaces actuales
+make status
+
+# Crear backup manual antes de cambios
+make backup-vscode
+
+# Limpiar enlaces y restaurar último backup
+make cleanup-vscode
+
+# Forzar configuración sin confirmación
+make setup-vscode-force
+
+# Ver todos los comandos disponibles
+make help
+```
+
+### ¿Qué hace la configuración?
+
+- 🔗 **Enlaces simbólicos automáticos**: Crea enlaces desde `~/Library/Application Support/Code/User/prompts/` hacia **todos los archivos** de las carpetas `rules/`, `prompts/` y `tools/` del repositorio, de forma recursiva y sin mantenimiento manual.
+- 📦 **Backup automático**: Realiza backup de tu configuración actual antes de cualquier cambio.
+- 🔄 **Sincronización automática**: Los archivos se actualizan automáticamente cuando haces `git pull`.
+- ✅ **Compatibilidad múltiple**: Funciona con GitHub Copilot, Windsurf y otros agentes compatibles.
+- ⚡ **Revertible**: Fácil restauración con `make cleanup-vscode`.
+
+### Detalles del enlace automático
+
+- Todos los archivos `*.md`, `*.json`, `*.jsonc` de `rules/`, `prompts/` y `tools/` se enlazan automáticamente.
+- El nombre del enlace en destino es: `<carpeta>_<nombrearchivo.ext>` (ejemplo: `rules_go_rules_ddd.instructions.md`).
+- Se excluyen archivos `README.md` para evitar ruido en la configuración.
+- No es necesario modificar el script al agregar nuevos recursos: cualquier archivo nuevo será enlazado automáticamente.
+
+### Troubleshooting
+
+**Si VS Code no reconoce los cambios:**
+
+```bash
+# Reinicia VS Code después de configurar enlaces
+# O usa Command Palette: "Developer: Reload Window"
+```
+
+**Para verificar enlaces:**
+
+```bash
+make status
+# O manualmente:
+ls -la ~/Library/Application\ Support/Code/User/prompts/
+```
+
+**Para revertir completamente:**
+
+```bash
+make cleanup-vscode
+# Esto elimina enlaces y restaura el último backup
+```
+
+---
+
 ## 🚀 Guía de contribución
 
 - Propón nuevas reglas, prompts o tools mediante un Pull Request.
