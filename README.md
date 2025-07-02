@@ -62,12 +62,6 @@ Este repositorio busca unificar la forma de trabajar con agentes de inteligencia
 
 ---
 
-## 📦 Qué puedes encontrar aquí
-
-- `/rules/`: Reglas y convenciones para la interacción con agentes.
-- `/prompts/`: Prompts y plantillas reutilizables.
-- `/tools/`: Recursos ligeros tipo tools (no ejecutables).
-- `/examples/`: Ejemplos de uso y casos prácticos.
 
 ---
 
