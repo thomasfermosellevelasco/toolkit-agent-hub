@@ -1,12 +1,13 @@
-# Título del PR
+# Título del Pull Request
 
 <!--
-Título del PR (ejemplo): "feat: add naming convention rules for Copilot and Windsurf"
-Debe ser breve, claro y no exceder los 70 caracteres.
 Convención sugerida: tipo-cambio: descripción breve (ej: feat: add X, fix: correct typo, docs: update readme)
+El título debe ser breve, claro y no exceder los 70 caracteres.
 -->
 
-## 🚨 Impacto (Breaking Changes)
+---
+
+## 🚨 ¿Este PR introduce cambios incompatibles (breaking changes)?
 
 - [ ] Sí (describe el impacto, pasos de migración y cómo afecta a los usuarios abajo)
 - [ ] No
@@ -15,10 +16,9 @@ Convención sugerida: tipo-cambio: descripción breve (ej: feat: add X, fix: cor
 
 ---
 
-## Descripción, contexto y consideraciones
+## 📝 Descripción, contexto y motivación
 
 <!--
-Incluye aquí:
 - ¿Qué problema resuelve o qué mejora aporta este PR?
 - ¿Por qué es necesario este cambio? (motivación, contexto, issue, requerimiento)
 - ¿Cuáles son los cambios principales? (explica el alcance, no solo lista)
@@ -28,7 +28,7 @@ Incluye aquí:
 
 ---
 
-## Pruebas y validación
+## 🧪 Pruebas y validación
 
 <!--
 - ¿Cómo se probó este cambio? (pruebas manuales, ejemplos, casos de uso, CI, etc.)
@@ -37,21 +37,30 @@ Incluye aquí:
 
 ---
 
-## Checklist
+## 📋 Checklist para autor y reviewer
 
 - [ ] La rama parte de `main` y está actualizada.
-- [ ] El título del PR es breve, claro y sigue la convención: tipo-cambio: descripción breve (ej: feat: add X, fix: correct typo, docs: update readme).
+- [ ] El título del PR es breve, claro y sigue la convención: tipo-cambio: descripción breve.
 - [ ] El código/documentación sigue las convenciones del repositorio.
 - [ ] No se suben archivos temporales, secretos ni de configuración local.
 - [ ] Se agregaron ejemplos o documentación si corresponde.
 - [ ] Si hay breaking changes, la sección correspondiente está completa y clara.
 - [ ] El PR incluye pruebas o evidencia de validación suficiente.
 - [ ] No quedan comentarios pendientes ni conflictos de merge.
+- [ ] Se respetan la [licencia CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) y la [guía de contribución](../CONTRIBUTING.md).
+
+---
+
+## 📢 Notas adicionales y referencias
 
 <!--
-Esta checklist es para el autor del PR. El reviewer puede sugerir agregar o quitar ítems según el contexto del cambio.
+Incluye aquí cualquier otra información relevante, enlaces a issues, discusiones, documentación o referencias externas.
 -->
 
 ---
 
 Gracias por tu contribución 🙌
+
+<!--
+💡 Recuerda: Una buena descripción y validación acelera la revisión y mejora la calidad del proyecto.
+-->
