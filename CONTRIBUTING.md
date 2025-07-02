@@ -2,6 +2,17 @@
 
 ¡Gracias por tu interés en contribuir! Este repositorio utiliza **GitHub Flow** para mantener un proceso simple, ágil y colaborativo.
 
+---
+
+## 📜 Licencia de contribuciones
+
+**Todo aporte realizado a este repositorio estará automáticamente cubierto por la licencia [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).**
+
+- Tus contribuciones serán abiertas y podrán ser reutilizadas y adaptadas por otros usuarios, siempre manteniendo la atribución.
+- Si haces un trabajo derivado, deberás compartirlo bajo la misma licencia y reconocer la autoría original.
+
+---
+
 ## 🚦 ¿Cómo contribuir?
 
 1. **Crea una rama descriptiva** para tu cambio a partir de `main`:
@@ -13,7 +24,7 @@
 3. **Haz commit y push** de tus cambios a tu rama:
    - `git add .`
    - `git commit -m "Clear description of the change"`
-   - `git push origin <your-branch-name>`
+   - `git push origin <nombre-de-tu-rama>`
 4. **Abre un Pull Request** hacia `main` explicando claramente el propósito y alcance de tu contribución.
 5. Participa en la revisión y responde comentarios si es necesario.
 6. Cuando el PR sea aprobado, se hará merge a `main`.
@@ -43,3 +54,5 @@
 - [Guía de ramas en GitHub](https://docs.github.com/en/get-started/quickstart/github-flow#create-a-branch)
 
 ¿Dudas? Abre un issue o pregunta en el PR.
+
+---
