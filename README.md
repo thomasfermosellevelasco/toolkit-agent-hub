@@ -15,8 +15,6 @@ Universal toolkit de recursos para agentes de IA
 
 ## 📄 Licencia y atribución
 
-[![Licencia: CC BY-SA 4.0](https://img.shields.io/badge/Licencia-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-
 Este repositorio está bajo licencia [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 - Puedes **usar, modificar, compartir y adaptar** todos los recursos aquí presentes (reglas, prompts, configuraciones, ejemplos, scripts utilitarios, etc.), incluso en proyectos propios o comerciales.
